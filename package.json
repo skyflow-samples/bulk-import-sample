@@ -1,0 +1,13 @@
+{
+  "name": "data_import_script",
+  "version": "1.0.0",
+  "description": "Import data into the data residency vault.",
+  "main": "import_data.js",
+  "author": "Sean Falconer",
+  "license": "MIT",
+  "dependencies": {
+    "axios-rate-limit": "^1.3.0",
+    "axios-retry": "^3.2.5",
+    "skyflow-node": "^1.3.0"
+  }
+}
