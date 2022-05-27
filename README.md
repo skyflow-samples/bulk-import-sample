@@ -5,6 +5,8 @@
 This application demonstrates how to bulk import records into a Skyflow vault. The sample includes
 a vault template, sample data for 1,000 records, and a script to import the sample data.
 
+The sample code imports 25 records at a time with a maximum of 80 requests per minute.
+
 ## Requirements
 
 - node - v10.17
@@ -47,3 +49,8 @@ policy for inserting records to the persons table for the vault you created.
 npm install
 node import_data.js
 ```
+
+## General insertion guidelines
+
+- Up to 25 records at a time.
+- Limit your import to 80 requests per minute.
