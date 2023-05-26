@@ -31,19 +31,17 @@ main();
  */
 async function main() {
   // Get the first 25 rows of column data from the "from" table.
-  let rows = await getRecords(tableFromName, { limit: 25, offset: 0,
+  let rows = await getRecords(tableFromName, { limit: MAX_RECORDS, offset: 0,
     fields: columnFromNames });
-  let offset = 25;
+  let offset = MAX_RECORDS;
 
   while(rows.length > 0) {
     // Insert into the "to" table vault table.
     await insert(tableToName, rows);
 
-    rows = await getRecords(tableFromName, { limit: 25, offset: offset,
+    rows = await getRecords(tableFromName, { limit: MAX_RECORDS, offset: offset,
       fields: columnFromNames });
-    offset += 25;
-
-    // console.dir(rows);
+    offset += MAX_RECORDS;
   }
 }
 
