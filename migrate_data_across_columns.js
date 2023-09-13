@@ -20,9 +20,9 @@ const MAX_RECORDS = 25;
 
 // TODO: Configure these values to represent the table name, column that
 // need to be copied, and the column to move the data into.
-let tableName = 'credit_cards';
-let columnFromName = 'card_number';
-let columnToName = 'card_number_2';
+let tableName = 'REPLACE_WITH_TABLE_FROM_NAME';
+let columnFromName = 'COLUMN_1';
+let columnToName = 'COLUMN_2';
 
 main();
 
